@@ -37,9 +37,9 @@ function LoginForm() {
             {!isLoginMode && <input type="text" placeholder="Name" required />}
             <input type="email" placeholder="Email Address" required />
             <input type="password" placeholder="Password" required />
-            {!isLoginMode && (
+            {/* {!isLoginMode && (
               <input type="password" placeholder="Confirm Password" required />
-            )}
+            )} */}
 
             {isLoginMode && (
               <div className="forgot-password">
