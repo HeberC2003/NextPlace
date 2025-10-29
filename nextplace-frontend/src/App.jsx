@@ -2,9 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Login from './login/login' // tu componente Login.jsx
 
 function App() {
   const [count, setCount] = useState(0)
+  const [showLogin, setShowLogin] = useState(false) // nuevo estado
+
+  if (showLogin) {
+    return <Login /> // muestra el login
+  }
 
   return (
     <>
@@ -21,6 +27,9 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={() => setShowLogin(true)}>
+          Ir al Login
+        </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -33,3 +42,5 @@ function App() {
 }
 
 export default App
+
+
