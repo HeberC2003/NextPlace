@@ -1,0 +1,377 @@
+/* ------------------ IMPORTACIÓN DE PONPINS ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ------------------ RESET Y ESTILOS BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white; /* texto principal en blanco */
+  background-color: rgb(0,0,0); /* fondo negro */
+  line-height: 1.5;
+}
+
+/* ------------------ CONTENEDORES ------------------ */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ------------------ ENCABEZADO DEL EVENTO ------------------ */
+.event-header {
+  background: rgb(20,20,20); /* fondo oscuro de sección */
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.event-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #707070;
+}
+
+.event-info {
+  padding: 1.8rem 2rem;
+}
+
+.event-info h2 {
+  font-weight: 700; /* bold para títulos */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.event-info p {
+  font-weight: 300; /* light para texto normal */
+  color: #ffffffcc; /* blanco con un poco de transparencia */
+  margin-bottom: 1rem;
+}
+
+.event-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: white;
+  font-weight: 500; /* medium para detalles */
+}
+
+/* ------------------ SECCIÓN DE TICKETS ------------------ */
+.tickets-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 90%;
+  gap: 2rem;
+}
+
+.tickets-left {
+  flex: 2;
+}
+
+.steps {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600; /* semibold */
+}
+
+.steps span {
+  color: #cccccc;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.steps .active-step {
+  color: white;
+}
+
+.steps .active-step::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* ------------------ TICKET CARD ------------------ */
+.ticket-card {
+  background: rgb(30,30,30);
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #707070;
+}
+
+.ticket-card h4 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.ticket-card p {
+  color: #ffffffaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.available {
+  display: inline-block;
+  background: #ffb3db; /* rosado */
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.ticket-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #707070; 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quantity-control button {
+  border: none;
+  background: rgb(50,50,50);
+  color: white;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quantity-control span {
+  padding: 0.4rem 1rem;
+  min-width: 24px;
+  text-align: center;
+  color: white;
+}
+
+/* ------------------ ORDER SUMMARY ------------------ */
+.order-summary {
+  background: rgb(30,30,30);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+  padding: 1.8rem;
+  flex: 1;
+  height: fit-content;
+}
+
+.order-summary h3 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.continue-btn,
+.pagar-btn,
+.continuar-btn {
+  background-color: rgb(255, 254, 254); 
+  color: rgb(24, 23, 23); 
+  border: 1px solid #707070; 
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 2rem;
+}
+
+.continue-btn:hover,
+.pagar-btn:hover,
+.continuar-btn:hover {
+  background-color: rgb(255, 255, 255); 
+}
+
+
+.secure-info,
+.cancel-info {
+  color: #cccccc;
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
+}
+
+.total-section {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* ------------------ FORMULARIO ------------------ */
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgb(30,30,30);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+  border: 1px solid #707070; 
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.detalles-form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #707070; 
+  border-radius: 6px;
+  background: rgb(40,40,40);
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ------------------ SUBTITULOS Y TEXTOS PEQUEÑOS ------------------ */
+.form-subtitle {
+  text-align: center;
+  color: #cccccc;
+  margin-bottom: 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 300; /* light */
+}
+
+/* ------------------ PAGO ------------------ */
+.pago-container {
+  max-width: 650px;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.payment-card {
+  background: rgb(40,40,40);
+  border: 1px solid #707070; 
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+.payment-card:hover {
+  border-color: white;
+  background: rgb(50,50,50);
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.08);
+}
+
+.payment-card img {
+  height: 28px;
+  margin-bottom: 0.5rem;
+}
+
+.card-form {
+  margin-top: 1rem;
+}
+
+.card-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-row div {
+  flex: 1;
+}
+
+/* ------------------ LOGO FOOTER ------------------ */
+.logo-footer {
+  width: 90px;
+  display: block;
+  margin: 20px auto;
+  opacity: 0.85;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  .tickets-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ticket-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ticket-actions {
+    margin-top: 0.5rem;
+  }
+
+  .order-summary {
+    width: 100%;
+  }
+}
