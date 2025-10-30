@@ -1,9 +1,18 @@
+/* Importar Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Aplicar Poppins a todo el cuerpo */
+body {
+  font-family: 'Poppins', sans-serif;
+}
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
+
 
 .login-container {
   display: flex;
