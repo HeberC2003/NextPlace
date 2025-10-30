@@ -1,15 +1,3 @@
 /* src/index.css */
-
-/* En v4 solo se usa un import global */
 @import "tailwindcss";
-
-/* Puedes agregar estilos globales opcionales */
-html, body, #root {
-  height: 100%;
-}
-
-body {
-  background-color: #f9fafb; /* bg-gray-50 */
-  color: #0f172a; /* text-slate-900 */
-  font-family: 'Inter', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap');
