@@ -1,14 +1,15 @@
 // src/routes/AppRouter.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/user/Home/Home";
-import LoginForm from "../pages/user/Login/login";
+import Login from "../pages/user/Login/Login";
 
 export default function AppRouter() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginForm />} />
+        {/* Ruta del login */}
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
