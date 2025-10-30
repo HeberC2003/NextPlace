@@ -1,5 +1,4 @@
 /* src/index.css */
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap');
 @import "tailwindcss";
 
@@ -27,7 +26,3 @@ body {
 .sign-in-button:hover {
   background-color: #389acb;
 }
-=======
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap');
->>>>>>> feature/Heber-eventlist
