@@ -1,7 +1,14 @@
 import React from "react";
-import "./Navbar.css"; // Importamos solo el CSS del navbar
+import { useNavigate } from "react-router-dom"; // ✅ Importa el hook para navegar
+import "./Navbar.css";
 
 const Navbar = () => {
+  const navigate = useNavigate(); // ✅ Inicializa el hook
+
+  const handleSignIn = () => {
+    navigate("/login"); // ✅ Redirige a la ruta de login
+  };
+
   return (
     <nav id="navbar">
       <div className="navbar-content">
@@ -10,7 +17,7 @@ const Navbar = () => {
           NextPlace
         </a>
 
-        {/* Links (corregido: ya no está oculto) */}
+        {/* Links */}
         <div className="navbar-links flex">
           <a href="#">Lorem</a>
           <a href="#">Lorem</a>
@@ -20,7 +27,9 @@ const Navbar = () => {
         {/* Acciones */}
         <div className="navbar-actions">
           <a href="#" className="user-icon"></a>
-          <button className="sign-in-button">Sign in</button>
+          <button className="sign-in-button" onClick={handleSignIn}>
+            Sign in
+          </button>
         </div>
       </div>
     </nav>
