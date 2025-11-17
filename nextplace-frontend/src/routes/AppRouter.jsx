@@ -7,6 +7,7 @@ import TicketsPages from "../pages/user/GetTickets/TicketsPages.jsx";
 import DetallePage from "../pages/user/GetTickets/DetallePage.jsx";
 import PagoPage from "../pages/user/GetTickets/PagoPage.jsx";
 import CreateEvent from "../pages/organizer/CreateEvent/CreateEvent.jsx";
+import EventList from "../pages/organizer/EventsList/EventList.jsx";
 
 export default function AppRouter() {
   return (
@@ -16,6 +17,8 @@ export default function AppRouter() {
         {/* --- Rutas Principales y de Usuario --- */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="/eventlist" element={<EventList />} />
 
         {/* --- Flujo de Compra de Tickets --- */}
         <Route path="/tickets/:eventId" element={<TicketsPages />} />
