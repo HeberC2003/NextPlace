@@ -1,0 +1,38 @@
+/* src/pages/organizer/EventsList/EventList.css */
+
+.event-list-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.event-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.event-subtitle {
+  font-size: 15px;
+  color: #777;
+}
+
+.create-event-btn {
+  background: #000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.create-event-btn:hover {
+  background: #333;
+}
