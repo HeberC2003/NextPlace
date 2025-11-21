@@ -21,11 +21,6 @@ export default function SideBar() {
           <span>Crear Evento</span>
         </Link>
 
-        <Link to="/organizer/update-evento" className="nav-item">
-          <span className="material-symbols-rounded nav-icon">edit</span>
-          <span>Update Event</span>
-        </Link>
-
         <Link to="/organizer/analytics" className="nav-item">
           <span className="material-symbols-rounded nav-icon">insights</span>
           <span>Analytics</span>

@@ -110,3 +110,20 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.event-card-btn {
+  background: #ffffff !important;
+  color: #000 !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.event-card-btn:hover {
+  background: #f2f2f2 !important;
+}

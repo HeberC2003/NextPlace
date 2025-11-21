@@ -1,40 +1,51 @@
 // src/routes/AppRouter.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Páginas públicas
+/* --- Páginas públicas / usuario --- */
 import Home from "../pages/user/Home/Home";
 import EventDetail from "../pages/user/EventDetail/EventDetail";
 
-// Dashboard layout
+import Login from "../pages/user/Login/login.jsx";
+import TicketsPages from "../pages/user/GetTickets/TicketsPages.jsx";
+import DetallePage from "../pages/user/GetTickets/DetallePage.jsx";
+import PagoPage from "../pages/user/GetTickets/PagoPage.jsx";
+
+/* --- Dashboard Layout --- */
 import DashboardLayout from "../pages/organizer/Dashboard/DashboardLayout";
 
-// Páginas del organizador
+/* --- Páginas del organizador --- */
 import EventList from "../pages/organizer/EventsList/EventList";
-// ❌ ESTA IMPORTACIÓN TE FALTABA Y DA ERROR, POR ESO LA COMENTAMOS
-// import CrearEvento from "../pages/organizer/CreateEvent/CreateEvent";
+import CreateEvent from "../pages/organizer/CreateEvent/CreateEvent.jsx";
+import UpdateEvent from "../pages/organizer/CreateEvent/UpdateEvent.jsx"; // NUEVO
 
 export default function AppRouter() {
   return (
     <Router>
       <Routes>
 
-        {/* HOME PÚBLICA */}
+        {/* --- HOME PÚBLICA --- */}
         <Route path="/" element={<Home />} />
+        <Route path="/evento/:id" element={<EventDetail />} />
 
-        {/* DASHBOARD — ruta principal */}
+        {/* --- LOGIN DE USUARIO --- */}
+        <Route path="/login" element={<Login />} />
+
+        {/* --- FLUJO DE COMPRA DE TICKETS --- */}
+        <Route path="/tickets/:eventId" element={<TicketsPages />} />
+        <Route path="/detalles/:eventId" element={<DetallePage />} />
+        <Route path="/pago/:eventId" element={<PagoPage />} />
+
+        {/* --- ORGANIZER DASHBOARD PRINCIPAL --- */}
         <Route
           path="/organizer"
           element={
             <DashboardLayout>
-              <EventList />   {/* << ESTE SE MUESTRA DE PRIMERO */}
+              <EventList />
             </DashboardLayout>
           }
         />
 
-        {/* EVENT DETAIL */}
-        <Route path="/evento/:id" element={<EventDetail />} />
-
-        {/* OTRAS SUBRUTAS DEL DASHBOARD */}
+        {/* --- MIS EVENTOS (ORGANIZER) --- */}
         <Route
           path="/organizer/mis-eventos"
           element={
@@ -44,17 +55,25 @@ export default function AppRouter() {
           }
         />
 
-        {/* ❌ RUTA QUE ESTABA DANDO ERROR — Comentada temporalmente */}
-        {/*
+        {/* --- CREAR EVENTO (ORGANIZER) --- */}
         <Route
           path="/organizer/crear-evento"
           element={
             <DashboardLayout>
-              <CrearEvento />
+              <CreateEvent />
             </DashboardLayout>
           }
         />
-        */}
+
+        {/* --- EDITAR EVENTO (ORGANIZER) --- */}
+        <Route
+          path="/organizer/editar-evento/:id"
+          element={
+            <DashboardLayout>
+              <UpdateEvent />
+            </DashboardLayout>
+          }
+        />
 
       </Routes>
     </Router>
