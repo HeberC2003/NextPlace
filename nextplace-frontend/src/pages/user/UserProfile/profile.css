@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.profile-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.profile-header {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f3f2f2;
+}
+
+.profile-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #707070;
+}
+
+.upload-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #707070;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-info label {
+  font-size: 14px;
+  color: #ffb3db;
+}
+
+.profile-info input {
+  padding: 10px;
+  border: 1px solid #707070;
+  border-radius: 6px;
+  background: #000;
+  color: white;
+}
+
+.save-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f7f5f6;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.events-title {
+  margin-bottom: 15px;
+  color: #f8f8f8;
+  font-size: 1.3rem;
+}
+
+.events-list {
+  display: grid;
+  gap: 15px;
+}
+
+.event-card {
+  border: 1px solid #707070;
+  padding: 15px;
+  border-radius: 10px;
+  background: #111;
+}
+
+.event-card h4 {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+.security-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  background: #0d0d0d;
+}
+
+.security-section h3 {
+  margin-bottom: 15px;
+  color: #f3f2f2;
+  font-size: 1.2rem;
+}
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+.security-section label {
+  display: block;
+  margin-bottom: 6px; 
+}
+
+.security-section input {
+  margin-bottom: 14px; 
+}
+
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .profile-info input {
+    width: 100%;
+  }
+
+  .upload-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-card {
+    text-align: left;
+  }
+}

@@ -7,6 +7,8 @@ import TicketsPages from "../pages/user/GetTickets/TicketsPages.jsx";
 import DetallePage from "../pages/user/GetTickets/DetallePage.jsx";
 import PagoPage from "../pages/user/GetTickets/PagoPage.jsx";
 import CreateEvent from "../pages/organizer/CreateEvent/CreateEvent.jsx";
+import ProfilePage from "../pages/user/UserProfile/ProfilePage.jsx";
+
 
 export default function AppRouter() {
   return (
@@ -14,6 +16,7 @@ export default function AppRouter() {
       {/* Ya no hay un Navbar global aquí */}
       <Routes>
         {/* --- Rutas Principales y de Usuario --- */}
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
